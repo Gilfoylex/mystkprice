@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sample of websocket with golang</title>
+	<script src="jquery.min.js"></script>
+    <script>
+      $(function() {
+	    var ws = new WebSocket("ws://localhost:8080/echo");
+        ws.onmessage = function(e) {
+		  //移除除表头外的所有行
+		  $('#tb tr:not(:first)').remove();
+		  //解析JSON数据
+		  var arr = JSON.parse(event.data);
+		  $.each(arr, function(index,item){
+		    //在表格的最后一行追加
+		    var rownum=$("#tb tr").length-1;
+			var row="<tr><td>"+item.stkcode+"</td><td>"+item.stkprice+"</td><td>"+item.amount+"</td></tr>";
+			$(row).insertAfter($("#tb tr:eq("+rownum+")"));
+		  });
+          //$('<li>').text(event.data).appendTo($ul);
+        };
+      });
+    </script>
+</head>
+<body>
+<table id="tb" border="1"><tr><td>股票代码</td><td>股票价格</td><td>成交量</td></tr></table>
+<ul id="msg-list"></ul>
+</body>
+</html>
