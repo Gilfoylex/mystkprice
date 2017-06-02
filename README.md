@@ -22,4 +22,4 @@ node /home/nodejs/stocks.js
 7.打开浏览器查看信息：
 http://localhost:8080/mystk0.html
 
-
+https://raw.githubusercontent.com/Gilfoylex/mystkprice/master/image.jpg
