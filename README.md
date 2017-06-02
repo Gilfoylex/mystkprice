@@ -7,7 +7,7 @@ http://pan.baidu.com/s/1sl8VxZf
 2.将自己的镜像“mydocker.tar”载入docker:
 docker load --input mydocker.tar
 
-3.根据当前目录的Dockfile构建容器:
+3.根据当前目录的Dockerfile构建容器:
 docker build -t mess:latest .
 
 4.用交互模式启动mess 容器，并转发8080端口:
