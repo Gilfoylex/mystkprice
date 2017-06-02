@@ -1,5 +1,7 @@
 # mystkprice
 模拟行情模拟生成器
+
+
 1.编译golang文件夹下的messenger.go源文件：go build messenger.go
 
 2.从百度云下载自己的镜像（基于Ubuntu 16.04 安装了nodejs和golang运行环境）：
