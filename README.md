@@ -17,7 +17,7 @@ docker run -it -p 8080:8080 mess
 cd /home/golang  => ./messenger&  (使用后台启动)
 
 6.启动随机生成股票信息的js程序
-node nodejs/stocks.js
+node /home/nodejs/stocks.js
 
 7.打开浏览器查看信息
 http://localhost:8080/mystk0.html
