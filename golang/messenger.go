@@ -121,7 +121,7 @@ func echoHandler(ws *websocket.Conn) {
 
 func Web() {
 
-	users = make(map[*websocket.Conn]string)
+    users = make(map[*websocket.Conn]string)
 	
     http.Handle("/echo", websocket.Handler(echoHandler))
     http.Handle("/", http.FileServer(http.Dir(".")))
